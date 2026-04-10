@@ -27,7 +27,7 @@ tool-cli/
 ├── .gitignore         # Always includes: .env (even if no creds yet)
 ├── .env.example       # Template with all required env vars (if tool needs credentials)
 ├── [executable]       # Globally callable entry point (see "Global Executables" below)
-└── [git repo]         # On GitHub as christiangenco/tool-cli, listed in sync.sh
+└── [git repo]         # On GitHub as gxbvc/tool-cli, listed in sync.sh
 ```
 
 ### README.md
@@ -207,7 +207,7 @@ The `dotenv` loader in `config.ts` reads `.env` from the tool's own directory �
 
 ## Git & GitHub
 
-- Every tool is its own repo under `christiangenco/tool-cli`
+- Every tool is its own repo under `gxbvc/tool-cli`
 - Add to `sync.sh` repos table for cross-machine syncing
 - Add to `~/tools/AGENTS.md` for LLM discovery
 - Credentials (`.env` files) are synced separately via `sync.sh creds`
@@ -251,14 +251,14 @@ git add -A
 git commit -m "Initial commit: my-tool-cli"
 
 # Create repo on GitHub (requires gh CLI):
-gh repo create christiangenco/my-tool-cli --public --source=. --push
+gh repo create gxbvc/my-tool-cli --public --source=. --push
 ```
 
 ### 5. Register in sync.sh
 
 Add to the `REPOS` array in `~/tools/sync.sh`:
 ```bash
-"my-tool-cli|https://github.com/christiangenco/my-tool-cli.git|main"
+"my-tool-cli|https://github.com/gxbvc/my-tool-cli.git|main"
 ```
 
 If the tool has its own `.env` (not a symlink to `../.env`), also add to `CRED_FILES`:

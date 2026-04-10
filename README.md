@@ -8,7 +8,7 @@ Custom tools live in `~/tools/` as individual git repos. Third-party tools are i
 
 ```bash
 # Clone this repo (it's the index, not the tools themselves)
-git clone https://github.com/christiangenco/agent-toolkit ~/tools/agent-toolkit
+git clone https://github.com/gxbvc/agent-toolkit ~/tools/agent-toolkit
 
 # Clone all custom tools + install deps
 ~/tools/agent-toolkit/sync.sh clone
@@ -23,14 +23,14 @@ git clone https://github.com/christiangenco/agent-toolkit ~/tools/agent-toolkit
 
 | Tool | What it does | Install |
 |------|-------------|---------|
-| [google-cli](https://github.com/christiangenco/google-cli) | Gmail, Calendar, Drive, Tasks | custom (Ruby) |
-| [imessages-cli](https://github.com/christiangenco/imessages-cli) | Read/send iMessages, search history | custom (Ruby, macOS) |
-| [twilio-sms-cli](https://github.com/christiangenco/twilio-sms-cli) | SMS via Twilio + conversation threads | custom + `brew install twilio` |
-| [calendly-cli](https://github.com/christiangenco/calendly-cli) | Manage event types, bookings, availability | custom (Ruby) |
-| [contacts-cli](https://github.com/christiangenco/contacts-cli) | Search macOS Contacts.app via AppleScript | custom (Ruby, macOS) |
-| [groove-cli](https://github.com/christiangenco/groove-cli) | Helpdesk inbox triage with Claude | custom (Ruby) |
-| [mailboxes-cli](https://github.com/christiangenco/mailboxes-cli) | Manage email across all your domains via Mailgun Mailboxes | custom (Ruby) |
-| [notify-cli](https://github.com/christiangenco/notify-cli) | macOS + ntfy.sh push notifications (get human attention) | custom (Bash) |
+| [google-cli](https://github.com/gxbvc/google-cli) | Gmail, Calendar, Drive, Tasks | custom (Ruby) |
+| [imessages-cli](https://github.com/gxbvc/imessages-cli) | Read/send iMessages, search history | custom (Ruby, macOS) |
+| [twilio-sms-cli](https://github.com/gxbvc/twilio-sms-cli) | SMS via Twilio + conversation threads | custom + `brew install twilio` |
+| [calendly-cli](https://github.com/gxbvc/calendly-cli) | Manage event types, bookings, availability | custom (Ruby) |
+| [contacts-cli](https://github.com/gxbvc/contacts-cli) | Search macOS Contacts.app via AppleScript | custom (Ruby, macOS) |
+| [groove-cli](https://github.com/gxbvc/groove-cli) | Helpdesk inbox triage with Claude | custom (Ruby) |
+| [mailboxes-cli](https://github.com/gxbvc/mailboxes-cli) | Manage email across all your domains via Mailgun Mailboxes | custom (Ruby) |
+| [notify-cli](https://github.com/gxbvc/notify-cli) | macOS + ntfy.sh push notifications (get human attention) | custom (Bash) |
 
 ```bash
 google-cli emails list --limit 5                     # Recent inbox
@@ -48,13 +48,13 @@ calendly-cli events --status active                   # Upcoming bookings
 
 | Tool | What it does | Install |
 |------|-------------|---------|
-| [google-ads-cli](https://github.com/christiangenco/google-ads-cli) | Google Ads campaigns, ad groups, conversions | custom (TypeScript) |
-| [meta-ads-cli](https://github.com/christiangenco/meta-ads-cli) | Facebook/Instagram campaigns, creatives, audiences | custom (TypeScript) |
-| [tiktok-ads-cli](https://github.com/christiangenco/tiktok-ads-cli) | TikTok campaigns, ad groups, creatives | custom (TypeScript) |
-| [x-ads-cli](https://github.com/christiangenco/x-ads-cli) | X/Twitter campaigns, line items, promoted tweets | custom (TypeScript) |
-| [x-cli](https://github.com/christiangenco/x-cli) | Organic X/Twitter posting, threads, timeline, DMs | custom (TypeScript) |
-| [linkedin](https://github.com/christiangenco/linkedin) | LinkedIn posting and engagement | custom (TypeScript) |
-| [dataforseo-cli](https://github.com/christiangenco/dataforseo-cli) | Keyword research, search volume, domain metrics | custom (Ruby) |
+| [google-ads-cli](https://github.com/gxbvc/google-ads-cli) | Google Ads campaigns, ad groups, conversions | custom (TypeScript) |
+| [meta-ads-cli](https://github.com/gxbvc/meta-ads-cli) | Facebook/Instagram campaigns, creatives, audiences | custom (TypeScript) |
+| [tiktok-ads-cli](https://github.com/gxbvc/tiktok-ads-cli) | TikTok campaigns, ad groups, creatives | custom (TypeScript) |
+| [x-ads-cli](https://github.com/gxbvc/x-ads-cli) | X/Twitter campaigns, line items, promoted tweets | custom (TypeScript) |
+| [x-cli](https://github.com/gxbvc/x-cli) | Organic X/Twitter posting, threads, timeline, DMs | custom (TypeScript) |
+| [linkedin](https://github.com/gxbvc/linkedin) | LinkedIn posting and engagement | custom (TypeScript) |
+| [dataforseo-cli](https://github.com/gxbvc/dataforseo-cli) | Keyword research, search volume, domain metrics | custom (Ruby) |
 
 ```bash
 google-ads-cli campaigns list                         # All campaigns
@@ -82,7 +82,7 @@ stripe listen --forward-to localhost:3000/webhooks
 
 | Tool | What it does | Install |
 |------|-------------|---------|
-| [namecheap-cli](https://github.com/christiangenco/namecheap-cli) | Domain registration, DNS management | custom (Ruby) |
+| [namecheap-cli](https://github.com/gxbvc/namecheap-cli) | Domain registration, DNS management | custom (Ruby) |
 | [vercel](https://vercel.com/docs/cli) | Deploy frontend apps, manage projects | `npm i -g vercel` |
 
 ```bash
@@ -118,8 +118,8 @@ supabase db push                                      # Push migrations
 | Tool | What it does | Install |
 |------|-------------|---------|
 | [agent-browser](https://github.com/vercel-labs/agent-browser) | Sandboxed browser automation for agents | `npm i -g agent-browser` |
-| [agent-chrome-cli](https://github.com/christiangenco/agent-chrome-cli) | Control user's real Chrome via CDP | custom (JS) |
-| [brave-search-cli](https://github.com/christiangenco/brave-search-cli) | Web, news, and image search via Brave Search API | custom (TypeScript) |
+| [agent-chrome-cli](https://github.com/gxbvc/agent-chrome-cli) | Control user's real Chrome via CDP | custom (JS) |
+| [brave-search-cli](https://github.com/gxbvc/brave-search-cli) | Web, news, and image search via Brave Search API | custom (TypeScript) |
 | [ddgr](https://github.com/jarun/ddgr) | DuckDuckGo search from terminal | `brew install ddgr` |
 
 ```bash
@@ -133,9 +133,9 @@ brave-search-cli news "topic" --freshness pd          # Recent news
 
 | Tool | What it does | Install |
 |------|-------------|---------|
-| [things-cli](https://github.com/christiangenco/things-cli) | Things 3 todos and projects | custom (Ruby, macOS) |
-| [apple-notes-cli](https://github.com/christiangenco/apple-notes-cli) | Apple Notes CRUD and search | custom (Ruby, macOS) |
-| [imessages-cli](https://github.com/christiangenco/imessages-cli) | iMessage read/send | custom (Ruby, macOS) |
+| [things-cli](https://github.com/gxbvc/things-cli) | Things 3 todos and projects | custom (Ruby, macOS) |
+| [apple-notes-cli](https://github.com/gxbvc/apple-notes-cli) | Apple Notes CRUD and search | custom (Ruby, macOS) |
+| [imessages-cli](https://github.com/gxbvc/imessages-cli) | iMessage read/send | custom (Ruby, macOS) |
 | [cliclick](https://github.com/BlueM/cliclick) | Simulate mouse clicks/keyboard | `brew install cliclick` |
 
 ```bash
@@ -149,14 +149,14 @@ apple-notes-cli create "Title" --body "Content"       # Create note
 
 | Tool | What it does | Install |
 |------|-------------|---------|
-| [remotion-cli](https://github.com/christiangenco/remotion-cli) | Render videos from JSON scene definitions | custom (TypeScript) |
-| [elevenlabs-cli](https://github.com/christiangenco/elevenlabs-cli) | ElevenLabs TTS, multi-speaker podcast dialogue | custom (TypeScript) |
-| [gemini-tts-cli](https://github.com/christiangenco/gemini-tts-cli) | Google Gemini TTS with multi-speaker dialogue | custom (TypeScript) |
-| [nanobanana-cli](https://github.com/christiangenco/nanobanana-cli) | Gemini image generation and editing | custom (TypeScript) |
-| [veo-cli](https://github.com/christiangenco/veo-cli) | Google Veo 3.1 video generation (text/image-to-video) | custom (TypeScript) |
-| [youtube-cli](https://github.com/christiangenco/youtube-cli) | YouTube video upload, update, list, stats | custom (TypeScript) |
-| [youtube-transcript-cli](https://github.com/christiangenco/youtube-transcript-cli) | Fetch YouTube transcripts | custom (Bash) |
-| [transistor-cli](https://github.com/christiangenco/transistor-cli) | Transistor.fm podcast hosting: shows, episodes, analytics | custom (TypeScript) |
+| [remotion-cli](https://github.com/gxbvc/remotion-cli) | Render videos from JSON scene definitions | custom (TypeScript) |
+| [elevenlabs-cli](https://github.com/gxbvc/elevenlabs-cli) | ElevenLabs TTS, multi-speaker podcast dialogue | custom (TypeScript) |
+| [gemini-tts-cli](https://github.com/gxbvc/gemini-tts-cli) | Google Gemini TTS with multi-speaker dialogue | custom (TypeScript) |
+| [nanobanana-cli](https://github.com/gxbvc/nanobanana-cli) | Gemini image generation and editing | custom (TypeScript) |
+| [veo-cli](https://github.com/gxbvc/veo-cli) | Google Veo 3.1 video generation (text/image-to-video) | custom (TypeScript) |
+| [youtube-cli](https://github.com/gxbvc/youtube-cli) | YouTube video upload, update, list, stats | custom (TypeScript) |
+| [youtube-transcript-cli](https://github.com/gxbvc/youtube-transcript-cli) | Fetch YouTube transcripts | custom (Bash) |
+| [transistor-cli](https://github.com/gxbvc/transistor-cli) | Transistor.fm podcast hosting: shows, episodes, analytics | custom (TypeScript) |
 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Download YouTube/web video | `brew install yt-dlp` |
 | [ffmpeg](https://ffmpeg.org/) | Video/audio conversion | `brew install ffmpeg` |
 | [humanizer](https://github.com/brandonwise/humanizer) | Detect/remove AI writing patterns | `npm i -g .` in repo |
@@ -179,7 +179,7 @@ ffmpeg -i input.mov -c:v libx264 output.mp4           # Convert video
 
 | Tool | What it does | Install |
 |------|-------------|---------|
-| [appfolio-workorder-cli](https://github.com/christiangenco/appfolio-workorder-cli) | AppFolio maintenance work orders | custom (Bash) |
+| [appfolio-workorder-cli](https://github.com/gxbvc/appfolio-workorder-cli) | AppFolio maintenance work orders | custom (Bash) |
 
 ```bash
 appfolio-workorder-cli list                           # Open work orders
