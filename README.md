@@ -30,6 +30,8 @@ git clone https://github.com/gxbvc/agent-toolkit ~/tools/agent-toolkit
 | [contacts-cli](https://github.com/gxbvc/contacts-cli) | Search macOS Contacts.app via AppleScript | custom (Ruby, macOS) |
 | [groove-cli](https://github.com/gxbvc/groove-cli) | Helpdesk inbox triage with Claude | custom (Ruby) |
 | [mailboxes-cli](https://github.com/gxbvc/mailboxes-cli) | Manage email across all your domains via Mailgun Mailboxes | custom (Ruby) |
+| [outlook-cli](https://github.com/gxbvc/outlook-cli) | Microsoft 365 Outlook mail via Graph API | custom (TypeScript) |
+| [helpscout-cli](https://github.com/gxbvc/helpscout-cli) | Help Scout customer support: conversations, customers, users | custom (TypeScript) |
 | [notify-cli](https://github.com/gxbvc/notify-cli) | macOS + ntfy.sh push notifications (get human attention) | custom (Bash) |
 
 ```bash
@@ -42,6 +44,56 @@ imessages-cli send "mom" "On my way"                  # Send by alias
 twilio api:core:messages:create --from "+18176685965" --to "+1234567890" --body "Hello" -o json
 calendly-cli types --active                           # Active booking links
 calendly-cli events --status active                   # Upcoming bookings
+outlook-cli emails list --search "invoice" --limit 10 # Search Outlook (christian@gxb.vc)
+outlook-cli emails send --to "x@y.com" --subject "Hi" --html "<p>Hello</p>"
+helpscout-cli conversations list --status active      # Open support tickets
+helpscout-cli conversations reply 555 --html "<p>Thanks!</p>" --status closed
+```
+
+### Research & SEO
+
+| Tool | What it does | Install |
+|------|-------------|---------|
+| [ahrefs-cli](https://github.com/gxbvc/ahrefs-cli) | Ahrefs keyword research, competitor traffic, backlinks | custom (TypeScript) |
+| [dataforseo-cli](https://github.com/gxbvc/dataforseo-cli) | Keyword research, search volume, domain metrics | custom (Ruby) |
+| [govspend-cli](https://github.com/gxbvc/govspend-cli) | Government contract search and tracking | custom (TypeScript) |
+| [brave-search-cli](https://github.com/gxbvc/brave-search-cli) | Web, news, and image search via Brave Search API | custom (TypeScript) |
+
+```bash
+ahrefs-cli keywords "scheduling software" --country us
+ahrefs-cli pages "calendly.com" --limit 25            # Top organic pages
+ahrefs-cli backlinks "example.com" --limit 100
+govspend-cli contracts search --query "AI consulting" --limit 20
+brave-search-cli search "query" -n 5                  # Web search as JSON
+```
+
+### Productivity & ops
+
+| Tool | What it does | Install |
+|------|-------------|---------|
+| [asana-cli](https://github.com/gxbvc/asana-cli) | Asana tasks, projects, sections, workspaces | custom (TypeScript) |
+| [fileinbox-cli](https://github.com/gxbvc/fileinbox-cli) | FileInbox: submit/download docs, shares, pages | custom (TypeScript) |
+
+```bash
+asana-cli tasks list --project 123                    # Tasks in a project
+asana-cli tasks create --name "Ship feature X" --project 123
+fileinbox-cli submit ./receipts/*.pdf
+fileinbox-cli download --since 2026-01-01
+```
+
+### Commerce & shipping
+
+| Tool | What it does | Install |
+|------|-------------|---------|
+| [ebay-cli](https://github.com/gxbvc/ebay-cli) | eBay listing search, item lookup, sold comps | custom (TypeScript) |
+| [ebay-sniper-cli](https://github.com/gxbvc/ebay-sniper-cli) | Last-second eBay bid sniper | custom (Bash) |
+| [shipping-label-cli](https://github.com/gxbvc/shipping-label-cli) | EasyPost shipping labels for USPS/UPS/FedEx | custom (TypeScript) |
+
+```bash
+ebay-cli search "vintage zenith radio" --sold --limit 25
+ebay-cli item 117100851583
+ebay-sniper-cli 117100851583 1.50 6                   # Snipe item for $1.50, 6s before end
+shipping-label-cli create --to "Jane Doe" --to-zip 78704 --weight 8 --carrier USPS
 ```
 
 ### Advertising
@@ -157,6 +209,8 @@ apple-notes-cli create "Title" --body "Content"       # Create note
 | [youtube-cli](https://github.com/gxbvc/youtube-cli) | YouTube video upload, update, list, stats | custom (TypeScript) |
 | [youtube-transcript-cli](https://github.com/gxbvc/youtube-transcript-cli) | Fetch YouTube transcripts | custom (Bash) |
 | [transistor-cli](https://github.com/gxbvc/transistor-cli) | Transistor.fm podcast hosting: shows, episodes, analytics | custom (TypeScript) |
+| [video-editor-cli](https://github.com/gxbvc/video-editor-cli) | Video editing: trim, concat, transcripts, proxy generation | custom (TypeScript) |
+| [html-to-image-cli](https://github.com/gxbvc/html-to-image-cli) | Render HTML files to PNG via headless Chrome (OG images, etc.) | custom (Node) |
 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Download YouTube/web video | `brew install yt-dlp` |
 | [ffmpeg](https://ffmpeg.org/) | Video/audio conversion | `brew install ffmpeg` |
 | [humanizer](https://github.com/brandonwise/humanizer) | Detect/remove AI writing patterns | `npm i -g .` in repo |
@@ -171,6 +225,9 @@ veo-cli generate "a cat playing piano"                # Generate video
 youtube-cli upload video.mp4 -t "Title" -d "Desc"    # Upload to YouTube
 youtube-transcript-cli transcript dQw4w9WgXcQ         # Get transcript
 transistor-cli episodes list --show-id 12345          # List podcast episodes
+video-editor-cli trim input.mp4 --start 10 --end 30 -o clip.mp4
+video-editor-cli transcript input.mp4 -o transcript.json
+html-to-image-cli render og-image.html -o og-image.png --width 1200 --height 630
 yt-dlp "https://youtube.com/watch?v=ID"               # Download video
 ffmpeg -i input.mov -c:v libx264 output.mp4           # Convert video
 ```
@@ -197,6 +254,8 @@ appfolio-workorder-cli update 19397-1 "Plumber scheduled for Tuesday"
 | [jq](https://jqlang.github.io/jq/) | JSON processor | `brew install jq` |
 | [fzf](https://github.com/junegunn/fzf) | Fuzzy finder | `brew install fzf` |
 | [eza](https://github.com/eza-community/eza) | Modern `ls` replacement | `brew install eza` |
+| [md-to-html](https://github.com/gxbvc/md-to-html) | Convert Markdown to polished Tailwind Typography HTML | custom (Bash) |
+| [scribe-cli](https://github.com/gxbvc/scribe-cli) | Scribe documentation API: capture and publish step-by-step guides | custom (TypeScript) |
 
 ```bash
 rg "TODO" --type ts                                   # Search TypeScript files
@@ -204,6 +263,8 @@ fd "\.env" ~/tools                                     # Find .env files
 gh pr list                                             # List open PRs
 gh issue create --title "Bug" --body "Details"
 cat data.json | jq '.items[] | .name'                 # Parse JSON
+md-to-html report.md                                   # → report.html (Tailwind Typography)
+scribe-cli guides list                                 # List your Scribe guides
 ```
 
 ### Background Processes
