@@ -86,13 +86,11 @@ fileinbox-cli download --since 2026-01-01
 | Tool | What it does | Install |
 |------|-------------|---------|
 | [ebay-cli](https://github.com/gxbvc/ebay-cli) | eBay listing search, item lookup, sold comps | custom (TypeScript) |
-| [ebay-sniper-cli](https://github.com/gxbvc/ebay-sniper-cli) | Last-second eBay bid sniper | custom (Bash) |
 | [shipping-label-cli](https://github.com/gxbvc/shipping-label-cli) | EasyPost shipping labels for USPS/UPS/FedEx | custom (TypeScript) |
 
 ```bash
 ebay-cli search "vintage zenith radio" --sold --limit 25
 ebay-cli item 117100851583
-ebay-sniper-cli 117100851583 1.50 6                   # Snipe item for $1.50, 6s before end
 shipping-label-cli create --to "Jane Doe" --to-zip 78704 --weight 8 --carrier USPS
 ```
 
@@ -311,8 +309,8 @@ Third-party tools use their own auth:
 
 ```bash
 ~/tools/agent-toolkit/sync.sh              # git pull & push all repos
-~/tools/agent-toolkit/sync.sh creds pull   # pull .env files from archy.local
-~/tools/agent-toolkit/sync.sh creds push   # push .env files to archy.local
+~/tools/agent-toolkit/sync.sh creds pull   # pull .env files from your credential host
+~/tools/agent-toolkit/sync.sh creds push   # push .env files to your credential host
 ~/tools/agent-toolkit/sync.sh clone        # first-time setup: clone all repos
 ```
 
