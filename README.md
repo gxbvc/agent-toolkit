@@ -169,6 +169,7 @@ supabase db push                                      # Push migrations
 |------|-------------|---------|
 | [agent-browser](https://github.com/vercel-labs/agent-browser) | Sandboxed browser automation for agents | `npm i -g agent-browser` |
 | [agent-chrome-cli](https://github.com/gxbvc/agent-chrome-cli) | Control user's real Chrome via CDP | custom (JS) |
+| [agent-usage-cli](https://github.com/gxbvc/agent-usage-cli) | Read Claude Code, Codex, and Grok subscription usage as JSON | custom (TypeScript) |
 | [brave-search-cli](https://github.com/gxbvc/brave-search-cli) | Web, news, and image search via Brave Search API | custom (TypeScript) |
 | [ddgr](https://github.com/jarun/ddgr) | DuckDuckGo search from terminal | `brew install ddgr` |
 
