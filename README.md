@@ -255,6 +255,7 @@ appfolio-workorder-cli update 19397-1 "Plumber scheduled for Tuesday"
 | [eza](https://github.com/eza-community/eza) | Modern `ls` replacement | `brew install eza` |
 | [md-to-html](https://github.com/gxbvc/md-to-html) | Convert Markdown to polished Tailwind Typography HTML | custom (Bash) |
 | [scribe-cli](https://github.com/gxbvc/scribe-cli) | Scribe documentation API: capture and publish step-by-step guides | custom (TypeScript) |
+| [typesafe-cli](https://github.com/gxbvc/typesafe-cli) | TypeSafe System One: noul/choice/score judgments over state | custom (Ruby) |
 
 ```bash
 rg "TODO" --type ts                                   # Search TypeScript files
@@ -264,6 +265,7 @@ gh issue create --title "Bug" --body "Details"
 cat data.json | jq '.items[] | .name'                 # Parse JSON
 md-to-html report.md                                   # → report.html (Tailwind Typography)
 scribe-cli guides list                                 # List your Scribe guides
+typesafe-cli noul "Does this convey urgency?" --state "Help! Payouts failing."
 ```
 
 ### Background Processes
