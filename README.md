@@ -31,6 +31,7 @@ git clone https://github.com/gxbvc/agent-toolkit ~/tools/agent-toolkit
 | [groove-cli](https://github.com/gxbvc/groove-cli) | Helpdesk inbox triage with Claude | custom (Ruby) |
 | [mailboxes-cli](https://github.com/gxbvc/mailboxes-cli) | Manage email across all your domains via Mailgun Mailboxes | custom (Ruby) |
 | [outlook-cli](https://github.com/gxbvc/outlook-cli) | Microsoft 365 Outlook mail via Graph API | custom (TypeScript) |
+| [stable-cli](https://github.com/gxbvc/stable-cli) | GXB virtual mailbox on Stable (scan/list/download mail) | custom (TypeScript) |
 | [helpscout-cli](https://github.com/gxbvc/helpscout-cli) | Help Scout customer support: conversations, customers, users | custom (TypeScript) |
 | [notify-cli](https://github.com/gxbvc/notify-cli) | macOS + ntfy.sh push notifications (get human attention) | custom (Bash) |
 
