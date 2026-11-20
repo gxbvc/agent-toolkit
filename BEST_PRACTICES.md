@@ -211,6 +211,7 @@ The `dotenv` loader in `config.ts` reads `.env` from the tool's own directory â€
 - Add to `sync.sh` repos table for cross-machine syncing
 - Add to `~/tools/AGENTS.md` for LLM discovery
 - Credentials (`.env` files) are synced separately via `sync.sh creds`
+- Public repos: no client names, family details, phone numbers, ~/projects/hq paths, workspace ids or server IPs. Before any push: check the repo's visibility (`gh repo view --json visibility`) and run `git log origin/main..` so only your own new commits go out. Put details agents on one machine need in an untracked `AGENTS.local.md` (in `.gitignore`).
 
 ## Adding a New Tool
 

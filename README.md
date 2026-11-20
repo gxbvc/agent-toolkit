@@ -42,7 +42,7 @@ google-cli calendar list                              # Next 7 days
 google-cli calendar create --summary "Lunch" --start "2026-03-01T12:00:00" --end "2026-03-01T13:00:00"
 imessages-cli threads --limit 10                      # Recent conversations
 imessages-cli send "mom" "On my way"                  # Send by alias
-twilio api:core:messages:create --from "+18176685965" --to "+1234567890" --body "Hello" -o json
+twilio api:core:messages:create --from "+15550000000" --to "+15550000001" --body "Hello" -o json
 calendly-cli types --active                           # Active booking links
 calendly-cli events --status active                   # Upcoming bookings
 outlook-cli emails list --search "invoice" --limit 10 # Search Outlook (christian@gxb.vc)
