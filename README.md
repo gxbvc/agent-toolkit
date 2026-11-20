@@ -24,12 +24,10 @@ git clone https://github.com/gxbvc/agent-toolkit ~/tools/agent-toolkit
 | Tool | What it does | Install |
 |------|-------------|---------|
 | [google-cli](https://github.com/gxbvc/google-cli) | Gmail, Calendar, Drive, Tasks | custom (Ruby) |
-| [imessages-cli](https://github.com/gxbvc/imessages-cli) | Read/send iMessages, search history | custom (Ruby, macOS) |
 | [twilio-sms-cli](https://github.com/gxbvc/twilio-sms-cli) | SMS via Twilio + conversation threads | custom + `brew install twilio` |
 | [calendly-cli](https://github.com/gxbvc/calendly-cli) | Manage event types, bookings, availability | custom (Ruby) |
 | [contacts-cli](https://github.com/gxbvc/contacts-cli) | Search macOS Contacts.app via AppleScript | custom (Ruby, macOS) |
 | [groove-cli](https://github.com/gxbvc/groove-cli) | Helpdesk inbox triage with Claude | custom (Ruby) |
-| [mailboxes-cli](https://github.com/gxbvc/mailboxes-cli) | Manage email across all your domains via Mailgun Mailboxes | custom (Ruby) |
 | [outlook-cli](https://github.com/gxbvc/outlook-cli) | Microsoft 365 Outlook mail via Graph API | custom (TypeScript) |
 | [stable-cli](https://github.com/gxbvc/stable-cli) | GXB virtual mailbox on Stable (scan/list/download mail) | custom (TypeScript) |
 | [helpscout-cli](https://github.com/gxbvc/helpscout-cli) | Help Scout customer support: conversations, customers, users | custom (TypeScript) |
@@ -40,8 +38,6 @@ google-cli emails list --limit 5                     # Recent inbox
 google-cli emails send --to "a@b.com" --subject "Hi" --text "Hello"
 google-cli calendar list                              # Next 7 days
 google-cli calendar create --summary "Lunch" --start "2026-03-01T12:00:00" --end "2026-03-01T13:00:00"
-imessages-cli threads --limit 10                      # Recent conversations
-imessages-cli send "mom" "On my way"                  # Send by alias
 twilio api:core:messages:create --from "+15550000000" --to "+15550000001" --body "Hello" -o json
 calendly-cli types --active                           # Active booking links
 calendly-cli events --status active                   # Upcoming bookings
@@ -187,7 +183,6 @@ brave-search-cli news "topic" --freshness pd          # Recent news
 |------|-------------|---------|
 | [things-cli](https://github.com/gxbvc/things-cli) | Things 3 todos and projects | custom (Ruby, macOS) |
 | [apple-notes-cli](https://github.com/gxbvc/apple-notes-cli) | Apple Notes CRUD and search | custom (Ruby, macOS) |
-| [imessages-cli](https://github.com/gxbvc/imessages-cli) | iMessage read/send | custom (Ruby, macOS) |
 | [cliclick](https://github.com/BlueM/cliclick) | Simulate mouse clicks/keyboard | `brew install cliclick` |
 
 ```bash
